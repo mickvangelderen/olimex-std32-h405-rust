@@ -1,0 +1,28 @@
+[package]
+name = "olimex-stm32-h405"
+version = "0.1.0"
+authors = ["Mick van Gelderen <mickvangelderen@gmail.com>"]
+description = "A demo application running on Olimex STM32-H405"
+keywords = ["arm", "cortex-m", "olimex"]
+categories = ["embedded", "no-std"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/mickvangelderen/olimex-stm32-h405-rust"
+
+[profile.dev]
+codegen-units = 1
+incremental = false
+
+[profile.release]
+lto = true
+debug = true
+
+[dependencies.cortex-m]
+version = "0.3.0"
+
+[dependencies.cortex-m-rt]
+version = "0.3.12"
+features = ["abort-on-panic"]
+
+[dependencies.cortex-m-semihosting]
+version = "0.2.0"
+

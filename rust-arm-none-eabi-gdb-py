@@ -1,0 +1,3 @@
+#!/bin/sh
+
+RUST_GDB="arm-none-eabi-gdb-py" rust-gdb $@
